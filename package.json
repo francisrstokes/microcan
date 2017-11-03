@@ -1,0 +1,30 @@
+{
+  "name": "microcan",
+  "version": "0.0.1",
+  "description": "A tiny canvas drawing library",
+  "main": "dist/microcan.module.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisrstokes/microcan.git"
+  },
+  "author": "Francis Stokes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/francisrstokes/microcan/issues"
+  },
+  "homepage": "https://github.com/francisrstokes/microcan#readme",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-strip-code": "^0.1.4",
+    "mocha": "^3.4.2"
+  }
+}
