@@ -37,6 +37,8 @@ var background = function background(ctx) {
   var g = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
   var b = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
   var a = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 255;
+  var w = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 500;
+  var h = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : 500;
 
   fill(ctx, r, g, b, a);
   ctx.fillRect(0, 0, w, h);

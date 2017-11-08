@@ -22,7 +22,7 @@ const noFill = (ctx) => {
   fill(ctx, 0, 0, 0, 0);
 }
 
-const background = (ctx, r = 0, g = 0, b = 0, a = 255) => {
+const background = (ctx, r = 0, g = 0, b = 0, a = 255, w = 500, h = 500) => {
   fill(ctx, r, g, b, a);
   ctx.fillRect(0, 0, w, h);
 }
