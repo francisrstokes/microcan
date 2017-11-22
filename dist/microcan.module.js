@@ -92,6 +92,10 @@ var drawPoly = function drawPoly(ctx, ps) {
   ctx.fill();
 };
 
+var rect = function rect(ctx, pos, w, h) {
+  ctx.rect.apply(ctx, _toConsumableArray(pos).concat([w, h]));
+};
+
 /* start exports */
 exports.setCanvasSize = setCanvasSize;
 exports.background = background;

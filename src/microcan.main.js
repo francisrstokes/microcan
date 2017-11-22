@@ -67,6 +67,10 @@ const drawPoly = (ctx, ps) => {
   ctx.fill();
 };
 
+const rect = (ctx, pos, w, h) => {
+  ctx.rect(...pos, w, h);
+};
+
 /* start window exports */
 /**
  * Polutes the global scope with unnamespaced functions

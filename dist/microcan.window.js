@@ -89,6 +89,10 @@ var drawPoly = function drawPoly(ctx, ps) {
   ctx.fill();
 };
 
+var rect = function rect(ctx, pos, w, h) {
+  ctx.rect.apply(ctx, _toConsumableArray(pos).concat([w, h]));
+};
+
 /* start window exports */
 /**
  * Polutes the global scope with unnamespaced functions
