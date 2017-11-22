@@ -126,7 +126,8 @@ window.microcan = {
   strokeWeight: strokeWeight,
   line: line,
   ellipse: ellipse,
-  drawPoly: drawPoly
+  drawPoly: drawPoly,
+  rect: rect
 };
 /* end window exports */
 },{}]},{},[1])

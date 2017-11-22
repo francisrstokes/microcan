@@ -108,4 +108,5 @@ exports.strokeWeight = strokeWeight;
 exports.line = line;
 exports.ellipse = ellipse;
 exports.drawPoly = drawPoly;
+exports.rect = rect;
 /* end exports */

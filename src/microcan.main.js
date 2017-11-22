@@ -104,7 +104,8 @@ window.microcan = {
   strokeWeight,
   line,
   ellipse,
-  drawPoly
+  drawPoly,
+  rect
 };
 /* end window exports */
 
@@ -120,4 +121,5 @@ export { strokeWeight as strokeWeight};
 export { line as line};
 export { ellipse as ellipse};
 export { drawPoly as drawPoly};
+export { rect as rect};
 /* end exports */
