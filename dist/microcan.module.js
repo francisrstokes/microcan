@@ -72,9 +72,25 @@ var line = function line(ctx, v, v2) {
   ctx.closePath();
 };
 
-var ellipse = function ellipse(ctx, v, r) {
+var ellipse = function ellipse(ctx, v, rx) {
+  var ry = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : rx;
+  var oa = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+  var sa = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 0;
+  var ea = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : Math.PI * 2;
+
   ctx.beginPath();
-  ctx.arc.apply(ctx, _toConsumableArray(v).concat([r, 0, Math.PI * 2, false]));
+  ctx.ellipse.apply(ctx, _toConsumableArray(v).concat([rx, ry, oa, sa, ea, false]));
+  ctx.stroke();
+  ctx.fill();
+  ctx.closePath();
+};
+
+var arc = function arc(ctx, v, r) {
+  var sa = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
+  var ea = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : Math.PI * 2;
+
+  ctx.beginPath();
+  ctx.arc.apply(ctx, _toConsumableArray(v).concat([r, sa, ea, false]));
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
@@ -107,6 +123,7 @@ exports.noStroke = noStroke;
 exports.strokeWeight = strokeWeight;
 exports.line = line;
 exports.ellipse = ellipse;
+exports.arc = arc;
 exports.drawPoly = drawPoly;
 exports.rect = rect;
 /* end exports */

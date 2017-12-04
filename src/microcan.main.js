@@ -47,9 +47,17 @@ const line = (ctx, v, v2) => {
   ctx.closePath();
 }
 
-const ellipse = (ctx, v, r) => {
+const ellipse = (ctx, v, rx, ry = rx, oa = 0, sa = 0, ea = Math.PI * 2) => {
   ctx.beginPath();
-  ctx.arc(...v, r, 0, Math.PI*2, false);
+  ctx.ellipse(...v, rx, ry, oa, sa, ea, false);
+  ctx.stroke();
+  ctx.fill();
+  ctx.closePath();
+}
+
+const arc = (ctx, v, r, sa = 0, ea = Math.PI * 2) => {
+  ctx.beginPath();
+  ctx.arc(...v, r, sa, ea, false);
   ctx.stroke();
   ctx.fill();
   ctx.closePath();
@@ -86,6 +94,7 @@ const polute = function () {
   window.strokeWeight = strokeWeight;
   window.line = line;
   window.ellipse = ellipse;
+  window.arc = arc;
   window.drawPoly = drawPoly;
 }
 
@@ -104,22 +113,24 @@ window.microcan = {
   strokeWeight,
   line,
   ellipse,
+  arc,
   drawPoly,
   rect
 };
 /* end window exports */
 
 /* start exports */
-export { setCanvasSize as setCanvasSize};
-export { background as background};
-export { stroke as stroke};
-export { poly as poly};
-export { fill as fill};
-export { noFill as noFill};
-export { noStroke as noStroke};
-export { strokeWeight as strokeWeight};
-export { line as line};
-export { ellipse as ellipse};
-export { drawPoly as drawPoly};
-export { rect as rect};
+export {setCanvasSize as setCanvasSize};
+export {background as background};
+export {stroke as stroke};
+export {poly as poly};
+export {fill as fill};
+export {noFill as noFill};
+export {noStroke as noStroke};
+export {strokeWeight as strokeWeight};
+export {line as line};
+export {ellipse as ellipse};
+export {arc as arc};
+export {drawPoly as drawPoly};
+export {rect as rect};
 /* end exports */
