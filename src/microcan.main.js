@@ -76,7 +76,10 @@ const drawPoly = (ctx, ps) => {
 };
 
 const rect = (ctx, pos, w, h) => {
+  ctx.beginPath();
   ctx.fillRect(...pos, w, h);
+  ctx.rect(...pos, w, h);
+  ctx.stroke();
 };
 
 /* start window exports */

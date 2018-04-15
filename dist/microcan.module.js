@@ -109,7 +109,10 @@ var drawPoly = function drawPoly(ctx, ps) {
 };
 
 var rect = function rect(ctx, pos, w, h) {
+  ctx.beginPath();
   ctx.fillRect.apply(ctx, _toConsumableArray(pos).concat([w, h]));
+  ctx.rect.apply(ctx, _toConsumableArray(pos).concat([w, h]));
+  ctx.stroke();
 };
 
 /* start exports */
